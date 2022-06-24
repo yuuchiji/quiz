@@ -98,7 +98,7 @@ setupQuiz();
 
 
 
-const clickHandler= (e)=>{
+const clickHandler = (e) => {
 
     // console.log(e.target);
     if(quiz[quizIndex].correct === e.target.textContent){
@@ -107,9 +107,9 @@ const clickHandler= (e)=>{
         window.alert('不正解！');
     }
 
-    quizIndex++
+    quizIndex++;
 
-    if(quizIndex< quizLength){
+    if(quizIndex < quizLength){
     // 問題数がまだあればこちらを実行
         setupQuiz();
 
@@ -117,7 +117,7 @@ const clickHandler= (e)=>{
     //問題数がもうなければこちらを実行
         window.alert('終了！'); 
     }
-}
+};
 
 let handlerIndex =0;
 console.log(quiz[quizIndex])
@@ -126,7 +126,7 @@ while( handlerIndex < buttonLength){
     // console.log($button[handlerIndex]);
 
     $button[handlerIndex].addEventListener('click', (e) =>{
-        clickHandler();
+        clickHandler(e);
     });
     handlerIndex++
 }
